@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "react",
+    "env"
+  ],
+  "plugins": [
+    ["babel-plugin-styled-components", {
+      "preprocess": false,
+      "ssr": true,
+      "displayName": false,
+    }],
+    ["transform-object-rest-spread"],
+    ["transform-class-properties"]
+  ]
+}
