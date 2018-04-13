@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { push } from 'react-router-redux';
-import { postNewTask } from '../../redux/modules/counter';
 
 const Form = props => {
   return (
@@ -34,7 +33,6 @@ const Form = props => {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      postNewTask,
       changePage: () => push('/'),
     },
     dispatch

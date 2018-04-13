@@ -34,7 +34,7 @@ const List = props => (
     {props.items.map((item, index) => (
       <ListItem key={index} index={index}>
         <Icon className="glyphicon glyphicon-ok icon" aria-hidden="true" />
-        Item number {item}
+        Item number {item + 1}
       </ListItem>
     ))}
   </WrapList>

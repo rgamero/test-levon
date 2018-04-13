@@ -27,12 +27,20 @@ export default (state = initialState, action) => {
         count: state.count + 1,
         items: [...state.items, state.count],
       };
-    case REMOVE_ITEMS:
-      return {
-        ...state,
-        count: state.count - 1,
-        items: [...state.items.slice(0, state.count - 1)],
-      };
+    case REMOVE_ITEMS: {
+      if (state.count == 0) {
+        return {
+          ...state,
+          count: state.count,
+        };
+      } else {
+        return {
+          ...state,
+          count: state.count - 1,
+          items: [...state.items.slice(0, state.count - 1)],
+        };
+      }
+    }
     default:
       return state;
   }
